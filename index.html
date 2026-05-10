@@ -6,4 +6,684 @@
     <title>ApanaDigitalStudio - AI Developer & Full Stack Expert</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root {\n            --primary-color: #667eea;\n            --secondary-color: #764ba2;\n            --accent-color: #f093fb;\n            --dark-bg: #1a1a2e;\n            --light-bg: #f8f9fa;\n            --text-dark: #2d3436;\n            --text-light: #636e72;\n            --white: #ffffff;\n            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);\n            --transition: all 0.3s ease;\n        }\n\n        * {\n            margin: 0;\n            padding: 0;\n            box-sizing: border-box;\n        }\n\n        body {\n            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n            color: var(--text-dark);\n            line-height: 1.6;\n            overflow-x: hidden;\n        }\n\n        .container {\n            max-width: 1200px;\n            margin: 0 auto;\n            padding: 0 20px;\n        }\n\n        /* Navigation */\n        .navbar {\n            background: var(--white);\n            box-shadow: var(--shadow);\n            position: sticky;\n            top: 0;\n            z-index: 1000;\n        }\n\n        .navbar .container {\n            display: flex;\n            justify-content: space-between;\n            align-items: center;\n            padding: 1rem 20px;\n        }\n\n        .nav-brand {\n            font-size: 1.5rem;\n            font-weight: bold;\n            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));\n            -webkit-background-clip: text;\n            -webkit-text-fill-color: transparent;\n            background-clip: text;\n        }\n\n        .nav-menu {\n            display: flex;\n            list-style: none;\n            gap: 2rem;\n        }\n\n        .nav-link {\n            text-decoration: none;\n            color: var(--text-dark);\n            font-weight: 500;\n            transition: var(--transition);\n        }\n\n        .nav-link:hover {\n            color: var(--primary-color);\n        }\n\n        /* Hero Section */\n        .hero {\n            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));\n            color: var(--white);\n            padding: 100px 20px;\n            text-align: center;\n            min-height: 600px;\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        }\n\n        .hero-content {\n            animation: fadeInUp 0.8s ease;\n        }\n\n        .hero-title {\n            font-size: 3.5rem;\n            margin-bottom: 1rem;\n            font-weight: bold;\n        }\n\n        .hero-subtitle {\n            font-size: 1.8rem;\n            margin-bottom: 1rem;\n            opacity: 0.95;\n        }\n\n        .hero-description {\n            font-size: 1.2rem;\n            margin-bottom: 2rem;\n            opacity: 0.9;\n        }\n\n        .hero-buttons {\n            display: flex;\n            gap: 1rem;\n            justify-content: center;\n            flex-wrap: wrap;\n        }\n\n        /* Buttons */\n        .btn {\n            padding: 12px 30px;\n            border: none;\n            border-radius: 50px;\n            font-size: 1rem;\n            cursor: pointer;\n            transition: var(--transition);\n            text-decoration: none;\n            display: inline-block;\n            font-weight: 600;\n        }\n\n        .btn-primary {\n            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));\n            color: var(--white);\n        }\n\n        .btn-primary:hover {\n            transform: translateY(-3px);\n            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);\n        }\n\n        .btn-secondary {\n            background: var(--white);\n            color: var(--primary-color);\n        }\n\n        .btn-secondary:hover {\n            background: var(--light-bg);\n        }\n\n        /* Section Styles */\n        section {\n            padding: 80px 20px;\n        }\n\n        .section-title {\n            font-size: 2.5rem;\n            text-align: center;\n            margin-bottom: 1rem;\n            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));\n            -webkit-background-clip: text;\n            -webkit-text-fill-color: transparent;\n            background-clip: text;\n        }\n\n        .section-subtitle {\n            text-align: center;\n            color: var(--text-light);\n            font-size: 1.1rem;\n            margin-bottom: 3rem;\n        }\n\n        /* Services Section */\n        .services {\n            background: var(--light-bg);\n        }\n\n        .services-grid {\n            display: grid;\n            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\n            gap: 2rem;\n        }\n\n        .service-card {\n            background: var(--white);\n            padding: 2rem;\n            border-radius: 10px;\n            box-shadow: var(--shadow);\n            transition: var(--transition);\n            text-align: center;\n        }\n\n        .service-card:hover {\n            transform: translateY(-10px);\n            box-shadow: 0 20px 50px rgba(102, 126, 234, 0.2);\n        }\n\n        .service-icon {\n            font-size: 3rem;\n            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));\n            -webkit-background-clip: text;\n            -webkit-text-fill-color: transparent;\n            background-clip: text;\n            margin-bottom: 1rem;\n        }\n\n        .service-card h3 {\n            font-size: 1.3rem;\n            margin-bottom: 1rem;\n            color: var(--text-dark);\n        }\n\n        .service-card p {\n            color: var(--text-light);\n        }\n\n        /* Projects Section */\n        .projects {\n            background: var(--white);\n        }\n\n        .projects-grid {\n            display: grid;\n            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\n            gap: 2rem;\n        }\n\n        .project-card {\n            background: var(--light-bg);\n            border-radius: 10px;\n            overflow: hidden;\n            box-shadow: var(--shadow);\n            transition: var(--transition);\n        }\n\n        .project-card:hover {\n            transform: translateY(-10px);\n            box-shadow: 0 20px 50px rgba(102, 126, 234, 0.2);\n        }\n\n        .project-image {\n            height: 200px;\n            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            font-size: 4rem;\n            color: var(--white);\n        }\n\n        .project-card h3 {\n            font-size: 1.3rem;\n            padding: 1.5rem 1.5rem 0.5rem;\n            color: var(--text-dark);\n        }\n\n        .project-card p {\n            padding: 0 1.5rem;\n            color: var(--text-light);\n            margin-bottom: 1rem;\n        }\n\n        .project-tags {\n            padding: 0 1.5rem;\n            display: flex;\n            flex-wrap: wrap;\n            gap: 0.5rem;\n            margin-bottom: 1rem;\n        }\n\n        .tag {\n            background: var(--primary-color);\n            color: var(--white);\n            padding: 4px 12px;\n            border-radius: 20px;\n            font-size: 0.85rem;\n        }\n\n        .project-link {\n            display: block;\n            padding: 1rem 1.5rem;\n            color: var(--primary-color);\n            text-decoration: none;\n            font-weight: 600;\n            transition: var(--transition);\n        }\n\n        .project-link:hover {\n            color: var(--secondary-color);\n        }\n\n        /* Skills Section */\n        .skills {\n            background: var(--light-bg);\n        }\n\n        .skills-grid {\n            display: grid;\n            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));\n            gap: 2rem;\n        }\n\n        .skill-category {\n            background: var(--white);\n            padding: 2rem;\n            border-radius: 10px;\n            box-shadow: var(--shadow);\n        }\n\n        .skill-category h3 {\n            color: var(--primary-color);\n            margin-bottom: 1rem;\n            font-size: 1.3rem;\n        }\n\n        .skill-list {\n            display: flex;\n            flex-wrap: wrap;\n            gap: 0.7rem;\n        }\n\n        .skill {\n            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));\n            color: var(--white);\n            padding: 8px 15px;\n            border-radius: 25px;\n            font-size: 0.9rem;\n        }\n\n        /* Contact Section */\n        .contact {\n            background: var(--white);\n        }\n\n        .contact-content {\n            display: grid;\n            grid-template-columns: 1fr 1fr;\n            gap: 3rem;\n            margin-top: 2rem;\n        }\n\n        .contact-info {\n            display: flex;\n            flex-direction: column;\n            gap: 2rem;\n        }\n\n        .contact-item {\n            display: flex;\n            gap: 1.5rem;\n            align-items: flex-start;\n        }\n\n        .contact-item i {\n            font-size: 1.8rem;\n            color: var(--primary-color);\n            margin-top: 0.3rem;\n        }\n\n        .contact-item h4 {\n            color: var(--text-dark);\n            margin-bottom: 0.3rem;\n        }\n\n        .contact-item a {\n            color: var(--primary-color);\n            text-decoration: none;\n            transition: var(--transition);\n        }\n\n        .contact-item a:hover {\n            color: var(--secondary-color);\n        }\n\n        .contact-form {\n            display: flex;\n            flex-direction: column;\n            gap: 1rem;\n        }\n\n        .contact-form input,\n        .contact-form textarea {\n            padding: 12px;\n            border: 2px solid var(--light-bg);\n            border-radius: 5px;\n            font-family: inherit;\n            transition: var(--transition);\n        }\n\n        .contact-form input:focus,\n        .contact-form textarea:focus {\n            outline: none;\n            border-color: var(--primary-color);\n            box-shadow: 0 0 10px rgba(102, 126, 234, 0.2);\n        }\n\n        /* Footer */\n        .footer {\n            background: var(--dark-bg);\n            color: var(--white);\n            text-align: center;\n            padding: 2rem 20px;\n        }\n\n        .footer .container {\n            display: flex;\n            justify-content: space-between;\n            align-items: center;\n            flex-wrap: wrap;\n            gap: 1rem;\n        }\n\n        .social-links {\n            display: flex;\n            gap: 1.5rem;\n        }\n\n        .social-links a {\n            color: var(--white);\n            font-size: 1.5rem;\n            transition: var(--transition);\n        }\n\n        .social-links a:hover {\n            color: var(--primary-color);\n        }\n\n        /* Animations */\n        @keyframes fadeInUp {\n            from {\n                opacity: 0;\n                transform: translateY(30px);\n            }\n            to {\n                opacity: 1;\n                transform: translateY(0);\n            }\n        }\n\n        /* Responsive */\n        @media (max-width: 768px) {\n            .hero-title {\n                font-size: 2.2rem;\n            }\n\n            .hero-subtitle {\n                font-size: 1.3rem;\n            }\n\n            .nav-menu {\n                gap: 1rem;\n                font-size: 0.9rem;\n            }\n\n            .section-title {\n                font-size: 2rem;\n            }\n\n            .contact-content {\n                grid-template-columns: 1fr;\n            }\n\n            .footer .container {\n                flex-direction: column;\n            }\n        }\n    </style>\n</head>\n<body>\n    <!-- Navigation -->\n    <nav class=\"navbar\">\n        <div class=\"container\">\n            <div class=\"nav-brand\">ApanaDigitalStudio</div>\n            <ul class=\"nav-menu\">\n                <li><a href=\"#home\" class=\"nav-link\">Home</a></li>\n                <li><a href=\"#services\" class=\"nav-link\">Services</a></li>\n                <li><a href=\"#projects\" class=\"nav-link\">Projects</a></li>\n                <li><a href=\"#skills\" class=\"nav-link\">Skills</a></li>\n                <li><a href=\"#contact\" class=\"nav-link\">Contact</a></li>\n            </ul>\n        </div>\n    </nav>\n\n    <!-- Hero Section -->\n    <section id=\"home\" class=\"hero\">\n        <div class=\"container\">\n            <div class=\"hero-content\">\n                <h1 class=\"hero-title\">ApanaDigitalStudio</h1>\n                <p class=\"hero-subtitle\">AI Developer | Full Stack Expert | Super Testing Skills</p>\n                <p class=\"hero-description\">Building intelligent digital solutions with cutting-edge technology and meticulous testing</p>\n                <div class=\"hero-buttons\">\n                    <a href=\"#projects\" class=\"btn btn-primary\">View My Work</a>\n                    <a href=\"#contact\" class=\"btn btn-secondary\">Get In Touch</a>\n                </div>\n            </div>\n        </div>\n    </section>\n\n    <!-- Services Section -->\n    <section id=\"services\" class=\"services\">\n        <div class=\"container\">\n            <h2 class=\"section-title\">Services</h2>\n            <div class=\"services-grid\">\n                <div class=\"service-card\">\n                    <div class=\"service-icon\"><i class=\"fas fa-brain\"></i></div>\n                    <h3>AI & Machine Learning</h3>\n                    <p>Develop intelligent systems, chatbots, and ML models that transform your business</p>\n                </div>\n                <div class=\"service-card\">\n                    <div class=\"service-icon\"><i class=\"fas fa-code\"></i></div>\n                    <h3>Full Stack Development</h3>\n                    <p>End-to-end web solutions with modern frontend and robust backend architecture</p>\n                </div>\n                <div class=\"service-card\">\n                    <div class=\"service-icon\"><i class=\"fas fa-vial\"></i></div>\n                    <h3>Quality Assurance & Testing</h3>\n                    <p>Comprehensive testing strategies ensuring bug-free, high-performance applications</p>\n                </div>\n                <div class=\"service-card\">\n                    <div class=\"service-icon\"><i class=\"fas fa-palette\"></i></div>\n                    <h3>UI/UX Design</h3>\n                    <p>Beautiful, user-centered design that enhances user experience and engagement</p>\n                </div>\n                <div class=\"service-card\">\n                    <div class=\"service-icon\"><i class=\"fas fa-rocket\"></i></div>\n                    <h3>Digital Solutions</h3>\n                    <p>Custom digital strategies tailored to your business goals and objectives</p>\n                </div>\n                <div class=\"service-card\">\n                    <div class=\"service-icon\"><i class=\"fas fa-chart-line\"></i></div>\n                    <h3>Performance Optimization</h3>\n                    <p>Optimize your applications for speed, scalability, and maximum efficiency</p>\n                </div>\n            </div>\n        </div>\n    </section>\n\n    <!-- Projects Section -->\n    <section id=\"projects\" class=\"projects\">\n        <div class=\"container\">\n            <h2 class=\"section-title\">Featured Projects</h2>\n            <p class=\"section-subtitle\">Showcasing my expertise across AI, Web Development, and Testing</p>\n            <div class=\"projects-grid\">\n                <div class=\"project-card\">\n                    <div class=\"project-image\">\n                        <i class=\"fas fa-robot\"></i>\n                    </div>\n                    <h3>AI Chatbot System</h3>\n                    <p>Intelligent chatbot with NLP capabilities for customer support automation</p>\n                    <div class=\"project-tags\">\n                        <span class=\"tag\">Python</span>\n                        <span class=\"tag\">AI/ML</span>\n                        <span class=\"tag\">NLP</span>\n                    </div>\n                    <a href=\"#\" class=\"project-link\">View Project →</a>\n                </div>\n                <div class=\"project-card\">\n                    <div class=\"project-image\">\n                        <i class=\"fas fa-globe\"></i>\n                    </div>\n                    <h3>E-Commerce Platform</h3>\n                    <p>Full-stack e-commerce solution with payment integration and real-time inventory</p>\n                    <div class=\"project-tags\">\n                        <span class=\"tag\">React</span>\n                        <span class=\"tag\">Node.js</span>\n                        <span class=\"tag\">MongoDB</span>\n                    </div>\n                    <a href=\"#\" class=\"project-link\">View Project →</a>\n                </div>\n                <div class=\"project-card\">\n                    <div class=\"project-image\">\n                        <i class=\"fas fa-microscope\"></i>\n                    </div>\n                    <h3>QA Automation Framework</h3>\n                    <p>Comprehensive testing framework reducing manual testing by 80%</p>\n                    <div class=\"project-tags\">\n                        <span class=\"tag\">Selenium</span>\n                        <span class=\"tag\">Python</span>\n                        <span class=\"tag\">Testing</span>\n                    </div>\n                    <a href=\"#\" class=\"project-link\">View Project →</a>\n                </div>\n            </div>\n        </div>\n    </section>\n\n    <!-- Skills Section -->\n    <section id=\"skills\" class=\"skills\">\n        <div class=\"container\">\n            <h2 class=\"section-title\">My Skills</h2>\n            <div class=\"skills-grid\">\n                <div class=\"skill-category\">\n                    <h3>Frontend</h3>\n                    <div class=\"skill-list\">\n                        <span class=\"skill\">React</span>\n                        <span class=\"skill\">JavaScript</span>\n                        <span class=\"skill\">HTML/CSS</span>\n                        <span class=\"skill\">Vue.js</span>\n                    </div>\n                </div>\n                <div class=\"skill-category\">\n                    <h3>Backend</h3>\n                    <div class=\"skill-list\">\n                        <span class=\"skill\">Node.js</span>\n                        <span class=\"skill\">Python</span>\n                        <span class=\"skill\">MongoDB</span>\n                        <span class=\"skill\">PostgreSQL</span>\n                    </div>\n                </div>\n                <div class=\"skill-category\">\n                    <h3>AI & ML</h3>\n                    <div class=\"skill-list\">\n                        <span class=\"skill\">TensorFlow</span>\n                        <span class=\"skill\">Machine Learning</span>\n                        <span class=\"skill\">NLP</span>\n                        <span class=\"skill\">Data Analysis</span>\n                    </div>\n                </div>\n                <div class=\"skill-category\">\n                    <h3>Testing & QA</h3>\n                    <div class=\"skill-list\">\n                        <span class=\"skill\">Selenium</span>\n                        <span class=\"skill\">Jest</span>\n                        <span class=\"skill\">Cypress</span>\n                        <span class=\"skill\">Test Automation</span>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </section>\n\n    <!-- Contact Section -->\n    <section id=\"contact\" class=\"contact\">\n        <div class=\"container\">\n            <h2 class=\"section-title\">Get In Touch</h2>\n            <p class=\"section-subtitle\">Let's build something amazing together!</p>\n            <div class=\"contact-content\">\n                <div class=\"contact-info\">\n                    <div class=\"contact-item\">\n                        <i class=\"fas fa-envelope\"></i>\n                        <div>\n                            <h4>Email</h4>\n                            <p><a href=\"mailto:amoljagadale474@gmail.com\">amoljagadale474@gmail.com</a></p>\n                        </div>\n                    </div>\n                    <div class=\"contact-item\">\n                        <i class=\"fas fa-phone\"></i>\n                        <div>\n                            <h4>Phone</h4>\n                            <p><a href=\"tel:+918431914652\">+91 8431914652</a></p>\n                        </div>\n                    </div>\n                    <div class=\"contact-item\">\n                        <i class=\"fas fa-instagram\"></i>\n                        <div>\n                            <h4>Instagram</h4>\n                            <p><a href=\"https://instagram.com/apanadigitalstudio\" target=\"_blank\">@apanadigitalstudio</a></p>\n                        </div>\n                    </div>\n                    <div class=\"contact-item\">\n                        <i class=\"fas fa-github\"></i>\n                        <div>\n                            <h4>GitHub</h4>\n                            <p><a href=\"https://github.com/AmolForAll\" target=\"_blank\">github.com/AmolForAll</a></p>\n                        </div>\n                    </div>\n                </div>\n                <form class=\"contact-form\">\n                    <input type=\"text\" placeholder=\"Your Name\" required>\n                    <input type=\"email\" placeholder=\"Your Email\" required>\n                    <textarea placeholder=\"Your Message\" rows=\"5\" required></textarea>\n                    <button type=\"submit\" class=\"btn btn-primary\">Send Message</button>\n                </form>\n            </div>\n        </div>\n    </section>\n\n    <!-- Footer -->\n    <footer class=\"footer\">\n        <div class=\"container\">\n            <p>&copy; 2026 ApanaDigitalStudio. All rights reserved.</p>\n            <div class=\"social-links\">\n                <a href=\"https://instagram.com/apanadigitalstudio\" target=\"_blank\"><i class=\"fab fa-instagram\"></i></a>\n                <a href=\"https://github.com/AmolForAll\" target=\"_blank\"><i class=\"fab fa-github\"></i></a>\n            </div>\n        </div>\n    </footer>\n\n    <script>\n        // Smooth scrolling for navigation links\n        document.querySelectorAll('a[href^=\"#\"]').forEach(anchor => {\n            anchor.addEventListener('click', function (e) {\n                e.preventDefault();\n                const target = document.querySelector(this.getAttribute('href'));\n                if (target) {\n                    target.scrollIntoView({\n                        behavior: 'smooth',\n                        block: 'start'\n                    });\n                }\n            });\n        });\n\n        // Form submission\n        const contactForm = document.querySelector('.contact-form');\n        if (contactForm) {\n            contactForm.addEventListener('submit', function (e) {\n                e.preventDefault();\n                alert('Thank you for your message! I will get back to you soon.');\n                this.reset();\n            });\n        }\n    </script>\n</body>\n</html>"
+        :root {
+            --primary-color: #667eea;
+            --secondary-color: #764ba2;
+            --accent-color: #f093fb;
+            --dark-bg: #1a1a2e;
+            --light-bg: #f8f9fa;
+            --text-dark: #2d3436;
+            --text-light: #636e72;
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .navbar {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 20px;
+        }
+
+        .nav-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 100px 20px;
+            text-align: center;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-content {
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .hero-subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--light-bg);
+        }
+
+        section {
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+
+        .services {
+            background: var(--light-bg);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(102, 126, 234, 0.2);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .service-card p {
+            color: var(--text-light);
+        }
+
+        .projects {
+            background: var(--white);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--light-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(102, 126, 234, 0.2);
+        }
+
+        .project-image {
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: var(--white);
+        }
+
+        .project-card h3 {
+            font-size: 1.3rem;
+            padding: 1.5rem 1.5rem 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .project-card p {
+            padding: 0 1.5rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .project-tags {
+            padding: 0 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tag {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        .project-link {
+            display: block;
+            padding: 1rem 1.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .project-link:hover {
+            color: var(--secondary-color);
+        }
+
+        .skills {
+            background: var(--light-bg);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .skill-category h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+        }
+
+        .skill {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 8px 15px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+        }
+
+        .contact {
+            background: var(--white);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .contact-item i {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-top: 0.3rem;
+        }
+
+        .contact-item h4 {
+            color: var(--text-dark);
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-item a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .contact-item a:hover {
+            color: var(--secondary-color);
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 12px;
+            border: 2px solid var(--light-bg);
+            border-radius: 5px;
+            font-family: inherit;
+            transition: var(--transition);
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 10px rgba(102, 126, 234, 0.2);
+        }
+
+        .footer {
+            background: var(--dark-bg);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem 20px;
+        }
+
+        .footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .social-links a {
+            color: var(--white);
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            color: var(--primary-color);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            .hero-subtitle {
+                font-size: 1.3rem;
+            }
+            .nav-menu {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+            .footer .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">ApanaDigitalStudio</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">ApanaDigitalStudio</h1>
+                <p class="hero-subtitle">AI Developer | Full Stack Expert | Super Testing Skills</p>
+                <p class="hero-description">Building intelligent digital solutions with cutting-edge technology and meticulous testing</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-brain"></i></div>
+                    <h3>AI & Machine Learning</h3>
+                    <p>Develop intelligent systems, chatbots, and ML models that transform your business</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-code"></i></div>
+                    <h3>Full Stack Development</h3>
+                    <p>End-to-end web solutions with modern frontend and robust backend architecture</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-vial"></i></div>
+                    <h3>Quality Assurance & Testing</h3>
+                    <p>Comprehensive testing strategies ensuring bug-free, high-performance applications</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-palette"></i></div>
+                    <h3>UI/UX Design</h3>
+                    <p>Beautiful, user-centered design that enhances user experience and engagement</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>Digital Solutions</h3>
+                    <p>Custom digital strategies tailored to your business goals and objectives</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Performance Optimization</h3>
+                    <p>Optimize your applications for speed, scalability, and maximum efficiency</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">Showcasing my expertise across AI, Web Development, and Testing</p>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image"><i class="fas fa-robot"></i></div>
+                    <h3>AI Chatbot System</h3>
+                    <p>Intelligent chatbot with NLP capabilities for customer support automation</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">AI/ML</span>
+                        <span class="tag">NLP</span>
+                    </div>
+                    <a href="#" class="project-link">View Project →</a>
+                </div>
+                <div class="project-card">
+                    <div class="project-image"><i class="fas fa-globe"></i></div>
+                    <h3>E-Commerce Platform</h3>
+                    <p>Full-stack e-commerce solution with payment integration and real-time inventory</p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">MongoDB</span>
+                    </div>
+                    <a href="#" class="project-link">View Project →</a>
+                </div>
+                <div class="project-card">
+                    <div class="project-image"><i class="fas fa-microscope"></i></div>
+                    <h3>QA Automation Framework</h3>
+                    <p>Comprehensive testing framework reducing manual testing by 80%</p>
+                    <div class="project-tags">
+                        <span class="tag">Selenium</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Testing</span>
+                    </div>
+                    <a href="#" class="project-link">View Project →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-list">
+                        <span class="skill">React</span>
+                        <span class="skill">JavaScript</span>
+                        <span class="skill">HTML/CSS</span>
+                        <span class="skill">Vue.js</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skill-list">
+                        <span class="skill">Node.js</span>
+                        <span class="skill">Python</span>
+                        <span class="skill">MongoDB</span>
+                        <span class="skill">PostgreSQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>AI & ML</h3>
+                    <div class="skill-list">
+                        <span class="skill">TensorFlow</span>
+                        <span class="skill">Machine Learning</span>
+                        <span class="skill">NLP</span>
+                        <span class="skill">Data Analysis</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Testing & QA</h3>
+                    <div class="skill-list">
+                        <span class="skill">Selenium</span>
+                        <span class="skill">Jest</span>
+                        <span class="skill">Cypress</span>
+                        <span class="skill">Test Automation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Let's build something amazing together!</p>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:amoljagadale474@gmail.com">amoljagadale474@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p><a href="tel:+918431914652">+91 8431914652</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-instagram"></i>
+                        <div>
+                            <h4>Instagram</h4>
+                            <p><a href="https://instagram.com/apanadigitalstudio" target="_blank">@apanadigitalstudio</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-github"></i>
+                        <div>
+                            <h4>GitHub</h4>
+                            <p><a href="https://github.com/AmolForAll" target="_blank">github.com/AmolForAll</a></p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 ApanaDigitalStudio. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://instagram.com/apanadigitalstudio" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/AmolForAll" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        const contactForm = document.querySelector('.contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                alert('Thank you for your message! I will get back to you soon.');
+                this.reset();
+            });
+        }
+    </script>
+</body>
+</html>
